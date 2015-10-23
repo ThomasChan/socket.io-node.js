@@ -1,0 +1,7 @@
+{
+  "name": "webSocket - ntp",
+  "version": "0.0.1",
+  "description": "webSocket ntp server",
+  "main": "server.js",
+  "author": "thomas chan"
+}

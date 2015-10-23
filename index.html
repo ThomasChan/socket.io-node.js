@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Bitnami: Open Source. Simplified</title>
+        <script src="socket.io.js"></script>
+        <script src="ntp.js"></script>
+    </head>
+    <body>
+        <div id="t"></div>
+        <script>
+            var socket = io.connect();
+            var options = {
+                callback: function( time ){
+                    document.getElementById('t').innerHTML = new Date(time)
+                }
+            }
+            ntp.init(socket, options);
+        </script>
+    </body>
+</html>
